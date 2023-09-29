@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PacmanGameManager : MonoBehaviour {
@@ -20,7 +18,7 @@ public class PacmanGameManager : MonoBehaviour {
     }
 
     private void Update() {
-        if (Lives <=0 && Input.anyKeyDown) {
+        if (Lives <= 0 && Input.anyKeyDown) {
             NewGame();
         }
     }
