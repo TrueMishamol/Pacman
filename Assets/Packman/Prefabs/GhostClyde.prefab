@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: InitialDirection.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3955961413786318922, guid: fd92b94c5d31a4242a7bdd8e98fc511e, type: 3}
+      propertyPath: Duration
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5446677121074196075, guid: fd92b94c5d31a4242a7bdd8e98fc511e, type: 3}
       propertyPath: m_Color.b
       value: 0.33333334

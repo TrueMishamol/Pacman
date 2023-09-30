@@ -42,10 +42,10 @@ public class PacmanGameManager : MonoBehaviour {
         ResetGhostMiltiplier();
 
         for (int i = 0; i < Ghosts.Length; i++) {
-            Ghosts[i].gameObject.SetActive(true);
+            Ghosts[i].ResetState();
         }
 
-        Pacman.gameObject.SetActive(true);
+        Pacman.ResetState();
     }
 
     private void GameOver() {
@@ -65,8 +65,6 @@ public class PacmanGameManager : MonoBehaviour {
     }
 
     public void PelletEaten(Pellet pellet) {
-        Debug.Log("Eaten");
-
         SetScore(Score + pellet.Points);
         pellet.gameObject.SetActive(false);
 
@@ -83,7 +81,7 @@ public class PacmanGameManager : MonoBehaviour {
     }
 
     public void GhostEaten(Ghost ghost) {
-        int points = ghost.points * GhostMultiplier;
+        int points = ghost.Points * GhostMultiplier;
         SetScore(Score + points);
         GhostMultiplier++;
     }

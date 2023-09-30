@@ -7,26 +7,24 @@ using UnityEngine.InputSystem;
 public class Pacman : MonoBehaviour {
 
 
-    public MovementComponent MovementComponent { get; private set; }
+    public MovementComponent Movement { get; private set; }
 
 
     private void Awake() {
-        MovementComponent = GetComponent<MovementComponent>();
+        Movement = GetComponent<MovementComponent>();
 
         InputActions inputActions = new InputActions();
         inputActions.Player.Enable();
         inputActions.Player.Movement.performed += Movement_performed;
 
-        MovementComponent.OnDirectionSwitched += MovementComponent_OnDirectionSwitched;
+        Movement.OnDirectionSwitched += MovementComponent_OnDirectionSwitched;
     }
 
     private void Movement_performed(InputAction.CallbackContext context) {
         Vector2 inputVector = context.ReadValue<Vector2>();
         inputVector = SimplifyVector(inputVector);
 
-        Debug.Log(inputVector);
-
-        MovementComponent.SetDirection(inputVector);
+        Movement.SetDirection(inputVector);
     }
 
     private Vector2 SimplifyVector(Vector2 inputVector) {
@@ -41,8 +39,17 @@ public class Pacman : MonoBehaviour {
     }
 
     private void MovementComponent_OnDirectionSwitched(object sender, System.EventArgs e) {
-        //^ Rotate facing direction
-        float angle = Mathf.Atan2(MovementComponent.Direction.y, MovementComponent.Direction.x);
+        RotateFacingDirection();
+    }
+
+    private void RotateFacingDirection() {
+        float angle = Mathf.Atan2(Movement.Direction.y, Movement.Direction.x);
         transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
+    }
+
+    public void ResetState() {
+        Movement.ResetState();
+        gameObject.SetActive(true);
+        RotateFacingDirection();
     }
 }
