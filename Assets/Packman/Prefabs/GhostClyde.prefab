@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: Duration
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 4580257826092704781, guid: fd92b94c5d31a4242a7bdd8e98fc511e, type: 3}
+      propertyPath: InitialBehavior
+      value: 
+      objectReference: {fileID: 4941288561499457807}
     - target: {fileID: 5446677121074196075, guid: fd92b94c5d31a4242a7bdd8e98fc511e, type: 3}
       propertyPath: m_Color.b
       value: 0.33333334
@@ -34,15 +38,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5651433639068897210, guid: fd92b94c5d31a4242a7bdd8e98fc511e, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5651433639068897210, guid: fd92b94c5d31a4242a7bdd8e98fc511e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5651433639068897210, guid: fd92b94c5d31a4242a7bdd8e98fc511e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5651433639068897210, guid: fd92b94c5d31a4242a7bdd8e98fc511e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -85,3 +89,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd92b94c5d31a4242a7bdd8e98fc511e, type: 3}
+--- !u!114 &4941288561499457807 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3955961413786318922, guid: fd92b94c5d31a4242a7bdd8e98fc511e, type: 3}
+  m_PrefabInstance: {fileID: 8247390774484988229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830f6a91bb580144b90f484c832b65ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

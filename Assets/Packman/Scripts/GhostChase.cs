@@ -15,7 +15,7 @@ public class GhostChase : GhostBehavior {
 
             foreach (Vector2 avalableDirection in node.AvalableDirections) {
                 Vector3 newPosition = transform.position + new Vector3(avalableDirection.x, avalableDirection.y, 0.0f);
-                float distance = (this.Ghost.Pacman.position - newPosition).sqrMagnitude;
+                float distance = (Ghost.Pacman.position - newPosition).sqrMagnitude;
 
                 if (distance < minDistance) {
                     direction = avalableDirection;
