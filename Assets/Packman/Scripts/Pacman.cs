@@ -16,6 +16,8 @@ public class Pacman : MonoBehaviour {
         InputActions inputActions = new InputActions();
         inputActions.Player.Enable();
         inputActions.Player.Movement.performed += Movement_performed;
+
+        MovementComponent.OnDirectionSwitched += MovementComponent_OnDirectionSwitched;
     }
 
     private void Movement_performed(InputAction.CallbackContext context) {
@@ -36,5 +38,11 @@ public class Pacman : MonoBehaviour {
         }
         inputVector.Normalize();
         return inputVector;
+    }
+
+    private void MovementComponent_OnDirectionSwitched(object sender, System.EventArgs e) {
+        //^ Rotate facing direction
+        float angle = Mathf.Atan2(MovementComponent.Direction.y, MovementComponent.Direction.x);
+        transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
     }
 }

@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class MovementComponent : MonoBehaviour {
 
+
+    public event EventHandler OnDirectionSwitched;
 
     public float Speed = 8.0f;
     public float SpeedMultiplier = 1.0f;
@@ -49,6 +52,7 @@ public class MovementComponent : MonoBehaviour {
         if (forced || !Occupied(direction)) {
             Direction = direction;
             NextDirection = Vector2.zero;
+            OnDirectionSwitched?.Invoke(this, EventArgs.Empty);
         } else {
             NextDirection = direction;
         }
