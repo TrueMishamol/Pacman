@@ -75,6 +75,10 @@ public class PacmanGameManager : MonoBehaviour {
     }
 
     public void PelletPowerEaten(PelletPower pellet) {
+        for (int i = 0; i < Ghosts.Length; i++) {
+            Ghosts[i].Frighen.Enable(pellet.Duration);
+        }
+
         CancelInvoke();
         Invoke(nameof(ResetGhostMiltiplier),pellet.Duration);
         PelletEaten(pellet);

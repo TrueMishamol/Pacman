@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5516127673684835808}
   - component: {fileID: 133544897567597175}
+  - component: {fileID: 3432104124462009458}
   m_Layer: 0
   m_Name: Eyes
   m_TagString: Untagged
@@ -84,6 +85,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3432104124462009458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964390221973349203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac06e65cab1bd834abd23a6eff384937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Up: {fileID: 21300000, guid: 157b12a680db30f4da0f3de804759997, type: 3}
+  Down: {fileID: 21300000, guid: 7c5b484cbb85e8c4ba5428dd0bc1cc29, type: 3}
+  Left: {fileID: 21300000, guid: 1f469b1612607c546add817da122b59e, type: 3}
+  Right: {fileID: 21300000, guid: b17e1bbba2081b24bad9fba198909dfd, type: 3}
 --- !u!1 &5774014138034945259
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8077668177644689281
 Transform:
   m_ObjectHideFlags: 0
@@ -124,7 +141,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5774014138034945259}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -207,7 +224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5238245228279303029
 Transform:
   m_ObjectHideFlags: 0
@@ -230,7 +247,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6790099026355452467}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -460,6 +477,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 8
+  Body: {fileID: 5446677121074196075}
+  Eyes: {fileID: 133544897567597175}
+  Blue: {fileID: 6083613830055779896}
+  White: {fileID: 1873211760898435269}
 --- !u!114 &3955961413786318922
 MonoBehaviour:
   m_ObjectHideFlags: 0
